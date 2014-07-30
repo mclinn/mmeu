@@ -1,4 +1,4 @@
 name = Maintenance Mode Exclude Urls
-description = Allow urls to be shown to visitors in maintenence mode.
+description = Allow urls to be shown to visitors in maintenance mode.
 core = 7.x
 package = Others
