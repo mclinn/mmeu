@@ -9,5 +9,5 @@
  * Implements hook_uninstall().
  */
 function mmeu_uninstall() {
-  variable_del('maintenance_mode_exclude_url');
+  variable_del('mmeu_urls');
 }
