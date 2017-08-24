@@ -2,5 +2,6 @@ name = Maintenance Mode Exclude Urls
 description = Allow urls to be shown to visitors in maintenance mode.
 package = Others
 backdrop = 1.x
+version = "1.x-1.0"
 type = module
 configure = admin/config/development/maintenance
