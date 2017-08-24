@@ -51,3 +51,15 @@ function mmeu_menu_site_status_alter(&$menu_site_status, $path) {
     $menu_site_status = MENU_SITE_ONLINE;
   }
 }
+
+
+/**
+ * Implements hook_config_info() for backdrop.
+ */
+function mmeu_config_info() {
+  $prefixes['mmeu.settings'] = array(
+    'label' => t('MMEU Settings'),
+    'group' => t('Configuration'),
+  );  
+  return $prefixes;
+} 
