@@ -6,8 +6,12 @@
  */
 
 /**
- * Implements hook_uninstall().
+ * Implements hook_update_N()
+ * for backdrop
  */
-function mmeu_uninstall() {
-  variable_del('mmeu_urls');
+function mmeu_update_1000() {
+  // Migrate variables to config.
+  config_set('mmeu.settings', 'mmeu_urls', update_variable_get('mmeu_urls', ""));		
+  // Delete variables.
+  update_variable_del('mmeu_urls');
 }
