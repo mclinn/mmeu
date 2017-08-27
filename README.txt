@@ -1,4 +1,6 @@
---SUMMARY --
+#Maintenance Mode Exclude Urls
+
+##Summary 
 
 Maintenance Mode Exclude Urls is a very simple and light weight
 module. It allows certain pages to be shown 
@@ -9,12 +11,12 @@ but still want to show some pages(generally READONLY pages) to the
 end user. You can use this module in those cases.
 
 
---INSTALLATION--
+##Installation
 
-Install as usual, see http://drupal.org/node/70151 for further information.
+Install this module using the official Backdrop CMS instructions at 
+https://backdropcms.org/guide/modules
 
-
---CONFIGURATION--
+##Configuration
 
 Goto Administration > Configuration > Development > Maintenance Mode
 
