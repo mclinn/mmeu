@@ -13,7 +13,7 @@ function mmeu_form_system_site_maintenance_mode_alter(&$form, &$form_state) {
   $form['mmeu_urls'] = array(
     '#type' => 'textarea',
     '#title' => t('Exclude Urls'),
-    '#description' => t("Enter pages to be shown to visitors in maintenance mode. Enter one page per line as Drupal paths. The * character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.",
+    '#description' => t("Enter pages to be shown to visitors in maintenance mode. Enter one page per line as Backdrop paths. The * character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.",
       array(
         '%blog' => 'blog',
         '%blog-wildcard' => 'blog/*',
@@ -45,9 +45,13 @@ function mmeu_menu_site_status_alter(&$menu_site_status, $path) {
   //$mmeu_urls = variable_get('mmeu_urls', '');
   // change for backdrop
   $mmeu_urls = config_get('mmeu.settings', 'mmeu_urls');
+  
+
+     
   if ($menu_site_status == MENU_SITE_OFFLINE && trim($mmeu_urls) != ''
-     && (drupal_match_path(drupal_get_path_alias($path), $mmeu_urls)
-     || drupal_match_path($path, $mmeu_urls))) {
+     && (backdrop_match_path(backdrop_get_path_alias($path), $mmeu_urls)
+     || backdrop_match_path($path, $mmeu_urls))) {     
+     	
     $menu_site_status = MENU_SITE_ONLINE;
   }
 }
