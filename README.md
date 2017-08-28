@@ -20,7 +20,7 @@ Installation
 Install this module using the official Backdrop CMS instructions at 
 https://backdropcms.org/guide/modules
 
-##Configuration
+## Configuration
 Goto Administration > Configuration > Development > Maintenance Mode
 
 Enter one page per line in Exclude Urls text area. Hit Save Configuration.
